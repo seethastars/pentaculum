@@ -1,0 +1,106 @@
+{
+  "position": "top",
+  "layer": "top",
+  "height": 22,
+  "width": 1366,
+  "reload_style_on_change": true,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": [],
+  "modules-right": [
+    "custom/cmus",
+    "custom/separator",
+    "cpu",
+    "memory",
+    "custom/separator", 
+    "tray", 
+    "pulseaudio", 
+    "battery", 
+    "custom/separator", 
+    "custom/weather", 
+    "custom/separator", 
+    "clock"
+  ],
+
+  /* Custom stuff */
+
+  "custom/separator": {
+      "format": "|",
+      "tooltip": false
+  },
+
+  "custom/weather": {
+      "exec": "~/.local/bin/weather",
+      "tooltip": false
+  },
+
+  "custom/cmus": {
+    "format": "♪ {}",
+    "interval": 5,
+    "exec": "cmus-remote -C \"format_print '%a - %t'\"", // artist - title
+    "exec-if": "pgrep cmus",
+    "on-click": "cmus-remote -u",                        //toggle pause
+    "escape": true                                       //handle markup entities
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "cpu": {
+    "format": " CPU {usage}%",
+    "interval": 1,
+  },
+
+  "memory": {  
+    "format": " RAM {percentage}%",
+    "interval": 1,
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+        "headphone": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "ignored-sinks": ["Easy Effects Sink"],
+    "tooltip": false
+  },
+
+  "battery": {
+    "bat": "BAT1",
+    "interval": 60,
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁻", "󰁽", "󰁿", "󰂀", "󰁹"],
+    "format-charging": "󱐋 {capacity}%",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": " {:%A, %d %B -  %I:%M %p}",
+    "interval": 1,
+    "tooltip": false
+  }
+}
