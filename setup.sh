@@ -45,7 +45,7 @@ do
       echo -e "${GREEN}Packages installed.\n${RC}"
       
       # setup configs and clean up home
-      cp -r .config/ .bashrc ~/
+      cp -r .config/ .local/ .bashrc ~/
       mkdir -p ~/.config/gtk-2.0/
       mkdir -p ~/.config/git/
       mkdir -p ~/.cache/bash/
