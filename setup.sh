@@ -14,7 +14,7 @@ u="$USER"
 
 while :
 do
-  read -p "Hi $u, would you like to install Hyprland dependecies? (y/n): " resp      # user response
+  read -p "Hi $u, would you like to install Pentaculum dependecies? (y/n): " resp
 
     if [[ $resp =~ ^[Nn]$ ]]; then
       exit 1
@@ -44,7 +44,7 @@ do
 
       echo -e "${GREEN}Packages installed.\n${RC}"
       
-      # Setup configs and clean up home
+      # setup configs and clean up home
       cp -r .config/ .bashrc ~/
       mkdir -p ~/.config/gtk-2.0/
       mkdir -p ~/.config/git/
