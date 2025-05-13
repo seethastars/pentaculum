@@ -20,7 +20,7 @@
 @define-color color6        #c1c1c1;
 
 window#waybar {
-    background: rgba(0, 0, 0, 1);
+    background: rgba(170, 170, 170, 1);
 }
 
 #workspaces button {
@@ -32,6 +32,14 @@ window#waybar {
 #workspaces button.active {
     color: @background;
     background-color: @foreground;
+}
+
+.modules-right {
+    background-color: @background;
+}
+
+.modules-left {
+    background-color: @background;
 }
 
 /* Custom stuff */
