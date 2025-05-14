@@ -46,6 +46,11 @@
             "key": "󰢮 GPU",
             "keyColor": "magenta"
         },
+        {
+            "type": "battery",
+            "key": " Battery",
+            "keyColor": "magenta"
+        }, 
         "break",
         {
             "type": "colors",

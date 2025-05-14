@@ -20,7 +20,7 @@
 @define-color color6        #c1c1c1;
 
 window#waybar {
-    background: rgba(170, 170, 170, 1);
+    background: rgba(130, 130, 130, 1);
 }
 
 #workspaces button {
@@ -31,7 +31,7 @@ window#waybar {
 
 #workspaces button.active {
     color: @background;
-    background-color: @foreground;
+    background-color: @color4;
 }
 
 .modules-right {
@@ -48,31 +48,7 @@ window#waybar {
     color: rgba(255, 255, 255, 0.5)
 }
 
-#custom-weather {
-    color: @foreground;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#custom-cmus {
-    color: @foreground;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 /* Modules */
-
-#cpu {
-    color: @foreground;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#memory {
-    color: @foreground;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
 #tray {
     padding-left: 10px;
